@@ -1,0 +1,5 @@
+Jul 23 10:14:02 server sshd[1021]: Accepted password for james from 192.168.1.15
+Jul 23 10:15:44 server sshd[1033]: Failed password for root from 203.0.113.45
+Jul 23 10:16:18 server sshd[1037]: Failed password for admin from 203.0.113.45
+Jul 23 10:17:50 server sshd[1042]: Failed password for root from 198.51.100.22
+Jul 23 10:20:11 server sshd[1050]: Accepted password for london from 192.168.1.20
