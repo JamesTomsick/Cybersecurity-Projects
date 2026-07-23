@@ -1,5 +1,33 @@
-Jul 23 10:14:02 server sshd[1021]: Accepted password for james from 192.168.1.15
-Jul 23 10:15:44 server sshd[1033]: Failed password for root from 203.0.113.45
-Jul 23 10:16:18 server sshd[1037]: Failed password for admin from 203.0.113.45
-Jul 23 10:17:50 server sshd[1042]: Failed password for root from 198.51.100.22
-Jul 23 10:20:11 server sshd[1050]: Accepted password for london from 192.168.1.20
+Jul 23 08:02:11 server sshd[2141]: Server listening on 0.0.0.0 port 22.
+Jul 23 08:03:47 server sshd[2145]: Accepted publickey for james from 192.168.1.15 port 51842 ssh2: RSA SHA256:AbCdEf1234567890
+Jul 23 08:04:02 server sshd[2145]: pam_unix(sshd:session): session opened for user james(uid=1001) by (uid=0)
+Jul 23 08:06:29 server sshd[2152]: Failed password for invalid user backup from 203.0.113.45 port 44120 ssh2
+Jul 23 08:06:31 server sshd[2152]: Failed password for invalid user backup from 203.0.113.45 port 44120 ssh2
+Jul 23 08:06:35 server sshd[2152]: Failed password for invalid user backup from 203.0.113.45 port 44120 ssh2
+Jul 23 08:06:38 server sshd[2152]: Received disconnect from 203.0.113.45 port 44120:11: Bye Bye [preauth]
+Jul 23 08:09:14 server sshd[2160]: Accepted password for london from 192.168.1.20 port 52991 ssh2
+Jul 23 08:09:14 server sshd[2160]: pam_unix(sshd:session): session opened for user london(uid=1002) by (uid=0)
+Jul 23 08:12:03 server sshd[2160]: pam_unix(sshd:session): session closed for user london
+Jul 23 08:15:46 server sshd[2168]: Failed password for root from 198.51.100.22 port 37764 ssh2
+Jul 23 08:15:49 server sshd[2168]: Failed password for root from 198.51.100.22 port 37764 ssh2
+Jul 23 08:15:53 server sshd[2168]: Failed password for root from 198.51.100.22 port 37764 ssh2
+Jul 23 08:15:57 server sshd[2168]: Failed password for root from 198.51.100.22 port 37764 ssh2
+Jul 23 08:16:01 server sshd[2168]: Failed password for root from 198.51.100.22 port 37764 ssh2
+Jul 23 08:16:08 server sshd[2168]: Connection closed by authenticating user root 198.51.100.22 port 37764 [preauth]
+Jul 23 08:20:22 server sshd[2175]: Accepted publickey for analyst from 10.0.0.42 port 60211 ssh2: ED25519 SHA256:QrStUv9876543210
+Jul 23 08:20:22 server sshd[2175]: pam_unix(sshd:session): session opened for user analyst(uid=1003) by (uid=0)
+Jul 23 08:24:40 server sshd[2181]: Invalid user test from 192.0.2.77 port 49301
+Jul 23 08:24:40 server sshd[2181]: Failed none for invalid user test from 192.0.2.77 port 49301 ssh2
+Jul 23 08:25:12 server sshd[2181]: Failed password for invalid user test from 192.0.2.77 port 49301 ssh2
+Jul 23 08:25:18 server sshd[2181]: Received disconnect from 192.0.2.77 port 49301:11: Bye Bye [preauth]
+Jul 23 08:31:05 server sshd[2190]: Accepted password for james from 192.168.1.15 port 51877 ssh2
+Jul 23 08:31:05 server sshd[2190]: pam_unix(sshd:session): session opened for user james(uid=1001) by (uid=0)
+Jul 23 08:36:19 server sshd[2175]: pam_unix(sshd:session): session closed for user analyst
+Jul 23 08:40:02 server sshd[2198]: Failed password for admin from 203.0.113.45 port 45210 ssh2
+Jul 23 08:40:05 server sshd[2198]: Failed password for admin from 203.0.113.45 port 45210 ssh2
+Jul 23 08:40:09 server sshd[2198]: Accepted password for admin from 203.0.113.45 port 45210 ssh2
+Jul 23 08:40:09 server sshd[2198]: pam_unix(sshd:session): session opened for user admin(uid=1004) by (uid=0)
+Jul 23 08:44:27 server sshd[2198]: pam_unix(sshd:session): session closed for user admin
+Jul 23 08:49:33 server sshd[2190]: pam_unix(sshd:session): session closed for user james
+Jul 23 08:55:00 server sshd[2206]: Connection from 198.51.100.88 port 39011 on 192.168.1.10 port 22
+Jul 23 08:55:00 server sshd[2206]: Unable to negotiate with 198.51.100.88 port 39011: no matching cipher found [preauth]
