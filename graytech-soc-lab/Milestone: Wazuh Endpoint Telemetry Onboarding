@@ -1,0 +1,79 @@
+Summary
+
+This milestone documents the onboarding of Windows endpoints into the Graytech SOC Analyst Home Lab. The Wazuh SIEM is now receiving endpoint telemetry from the domain controller and workstation systems, allowing security events to be reviewed from a centralized dashboard.
+
+Systems Onboarded
+
+| Host       | Role                                                | Status         |
+|------------|-----------------------------------------------------|----------------|
+| grayserver | Ubuntu Wazuh Manager / SIEM Server                  | Active / Local |
+| DC01       | Windows Server / Active Directory Domain Controller | Active         |
+| GrayMain   | Windows Workstation                                 | Active         |
+
+Telemetry Sources
+
+The lab is configured to collect Windows event data from onboarded endpoints, including:
+
+- Windows Security logs
+- Windows System logs
+- Windows Application logs
+- Sysmon Operational logs
+- Wazuh Security Configuration Assessment data
+- File Integrity Monitoring data
+
+Sysmon Integration
+
+Sysmon was added to improve endpoint visibility beyond default Windows event logs. With Sysmon enabled, the lab can collect detailed telemetry such as:
+
+- Process creation events
+- Network connection events
+- DNS query events
+- File creation events
+- Parent/child process relationships
+- Command-line execution details
+- Process hashes
+
+This telemetry is useful for investigating suspicious activity and practicing real SOC analyst workflows.
+
+Validation Test
+
+A basic telemetry validation test was performed by running a command on the endpoint and searching for the resulting Sysmon event in Wazuh.
+
+Example test command:
+
+powershell
+whoami
+
+
+Expected telemetry path:
+
+text
+Command executed on endpoint
+  -> Sysmon logs process creation
+  -> Wazuh agent collects Sysmon event
+  -> Wazuh manager receives event
+  -> Analyst searches event in Wazuh dashboard
+
+
+Screenshots
+
+Screenshot: screenshots/Wazuh agents connected .png
+Description: Shows active Wazuh agents including the SIEM server, DC01, and GrayMain
+────────────────────────────────────────
+Screenshot: screenshots/Result of test command.png
+Description: Shows a test command captured through Sysmon and searchable in Wazuh
+
+Skills Demonstrated
+
+- SIEM deployment
+- Endpoint onboarding
+- Windows event log collection
+- Sysmon deployment
+- Wazuh agent configuration
+- Endpoint telemetry validation
+- SOC-style event searching
+- Security documentation
+
+Current Status
+
+The Graytech lab now has centralized endpoint telemetry collection through Wazuh. The next phase is to create detection scenarios and incident reports using the collected events.
