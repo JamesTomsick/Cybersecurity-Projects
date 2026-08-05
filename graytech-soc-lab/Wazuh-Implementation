@@ -1,0 +1,96 @@
+Wazuh SIEM Deployment Summary
+
+Overview
+
+As part of the Graytech SOC Analyst Home Lab, I deployed a Wazuh SIEM server to collect, analyze, and monitor security events from Windows, Linux, and future lab systems.
+
+The goal of this setup is to gain hands-on SOC analyst experience by collecting real endpoint and authentication telemetry, investigating alerts, and documenting security events in a realistic lab environment.
+
+SIEM Platform
+
+- SIEM: Wazuh
+- Deployment Type: All-in-one installation
+- Components Installed:
+  - Wazuh Manager
+  - Wazuh Indexer
+  - Wazuh Dashboard
+  - Filebeat
+
+Server Role
+
+The SIEM was deployed on a dedicated Ubuntu server instead of the main Windows workstation.
+
+This design allows the Windows workstation and domain controller to act as monitored endpoints while the Ubuntu server acts as the centralized security monitoring platform.
+
+Lab Network Role
+
+Ubuntu Server
+  - Wazuh Manager
+  - Wazuh Indexer
+  - Wazuh Dashboard
+  - Local Wazuh monitoring agent
+
+Windows Server / DC01
+  - Planned Wazuh Agent
+  - Active Directory security logs
+  - Authentication events
+  - Account management events
+
+Main Windows Workstation
+  - Planned Wazuh Agent
+  - Endpoint security logs
+  - Defender events
+  - PowerShell logs
+  - Sysmon telemetry
+
+Router / Future Lab Networks
+  - Planned syslog/network telemetry
+  - Future subnet/VLAN monitoring
+
+
+For the domain controller and Windows workstation, the lab will collect:
+
+- Windows Security logs
+- Windows System logs
+- Windows Defender events
+- PowerShell logs
+- Authentication events
+- Account management events
+- Group membership changes
+- Sysmon telemetry
+- Firewall events
+
+SOC Analyst Skills Practiced
+
+This SIEM setup supports hands-on practice with:
+
+- Alert triage
+- Windows event log analysis
+- Active Directory monitoring
+- Failed logon investigation
+- Password spray detection
+- Account lockout investigation
+- PowerShell activity review
+- Endpoint monitoring
+- File integrity monitoring
+- Vulnerability detection
+- Security configuration assessment
+- Incident documentation
+
+Future Detection Scenarios
+
+Planned detection and investigation scenarios include:
+
+- Multiple failed logons
+- Password spraying
+- Successful logon after repeated failures
+- New user account creation
+- User added to privileged group
+- Suspicious PowerShell execution
+- Encoded PowerShell commands
+- RDP logons
+- SMB share access monitoring
+- Account lockouts
+- Windows Defender alerts
+- Suspicious scheduled task creation
+- Suspicious service creation
