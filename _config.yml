@@ -1,5 +1,9 @@
 title: CyberGray
-description: This is a Personal Page for my Cybersecurity Journey
-show_downloads: false
-google_analytics:
+description: Navy vet documenting my path to SOC Analyst — projects, labs, and write-ups
 theme: jekyll-theme-midnight
+show_downloads: false
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
