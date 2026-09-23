@@ -1,5 +1,5 @@
 title: CyberGray
 description: This is a Personal Page for my Cybersecurity Journey
-show_downloads: true
+show_downloads: false
 google_analytics:
 theme: jekyll-theme-midnight
